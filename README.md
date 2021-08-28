@@ -52,3 +52,18 @@ Third party plugins
 
  Thrid party software quality control tools 
    StyleCop - code style guide 
+
+---------------------------------------------------------------------------------
+
+Instructions 
+
+ - Select startup project as "TrabbleChatBot"
+ - Start Telegram Desktop version
+ - Run TrabbleChatBot project
+ - Enter below commands into "DilukaTrabbleChatBot" in Telegram
+     hi
+ 
+
+---------------------------------------------------------------------------------
+References 
+ - https://core.telegram.org/bots

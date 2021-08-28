@@ -10,14 +10,15 @@ namespace TrabbleChatBot
         static void Main(string[] args)
         {
 
-          //DI Implementation 
-          var serviceProvider = new ServiceCollection()
+            //DI Implementation 
+            //TODO : Need to move into another class 
+            var serviceProvider = new ServiceCollection()
+             .AddSingleton<IChatBotHelperService, ChatBotHelperService>()
+             .AddSingleton<IChatBotManagerService, ChatBotManagerService>()
+             .BuildServiceProvider();
 
-         .AddSingleton<IChatBotManagerService, ChatBotManagerService>()
-         .BuildServiceProvider();
-
-          var bar = serviceProvider.GetService<IChatBotManagerService>();
-          bar.LoadChatBotReplyAsync();
+            var bar = serviceProvider.GetService<IChatBotManagerService>();
+            bar.LoadChatBotReplyAsync();
         }
     }
 }

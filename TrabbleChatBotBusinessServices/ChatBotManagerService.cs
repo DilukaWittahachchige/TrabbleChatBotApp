@@ -12,10 +12,12 @@ namespace TrabbleChatBotBusinessServices
     {
         private static readonly TelegramBotClient bot = new TelegramBotClient("1988158546:AAEGTAT9akP-ygoHh2xwpGo3UvELL8kbdWk");
 
+        private readonly IChatBotHelperService _helperService;
+
         //Constructer
-        public ChatBotManagerService()
+        public ChatBotManagerService(IChatBotHelperService helperService)
         {
-         
+            this._helperService = helperService;
         }
 
         public async Task LoadChatBotReplyAsync()
@@ -27,18 +29,19 @@ namespace TrabbleChatBotBusinessServices
             Console.ReadLine();
             bot.StopReceiving();
 
-         }
+        }
 
-        private static void Csharpcornerbotmessage(object sender, MessageEventArgs e)
+        private void Csharpcornerbotmessage(object sender, MessageEventArgs e)
         {
             if (e.Message.Type == Telegram.Bot.Types.Enums.MessageType.Text)
                 PrepareQuestionnaires(e);
         }
-        private static void PrepareQuestionnaires(MessageEventArgs e)
+        private void PrepareQuestionnaires(MessageEventArgs e)
         {
             if (e.Message.Text.ToLower() == "hi")
                 bot.SendTextMessageAsync(e.Message.Chat.Id, "hello Sir/Madam" + Environment.NewLine + "welcome to Trabble chat bot." + Environment.NewLine + "How may i help you ?");
-
+            else if (e.Message.Text.ToLower().Contains("/help"))
+                bot.SendTextMessageAsync(e.Message.Chat.Id, _helperService.LoadHelpMessage());
         }
     }
 }
