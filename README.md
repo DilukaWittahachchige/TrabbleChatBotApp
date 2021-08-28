@@ -47,3 +47,8 @@ Technology stack
 
 Third party plugins
  -  telegram API (e.g. https://github.com/TelegramBots/Telegram.Bot)
+
+ -------------------------------------------------------------------------------
+
+ Thrid party software quality control tools 
+   StyleCop - code style guide 
