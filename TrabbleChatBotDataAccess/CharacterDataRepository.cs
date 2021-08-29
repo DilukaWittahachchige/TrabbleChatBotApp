@@ -14,13 +14,13 @@ namespace TrabbleChatBotDataAccess
         /// </summary>
         /// <param name="currencyCode"></param>
         /// <returns></returns>
-        public async Task<Object> LoadExchangeRatesAsync(string currencyCode)
+        public async Task<Object> LoadCharacterDataAsync(string characterName)
         {
-            if (string.IsNullOrWhiteSpace(currencyCode))
+            if (string.IsNullOrWhiteSpace(characterName))
                 return new object();
 
             var characterWS = new CharacterDataWS();
-            return await characterWS.LoadCharacterInfo(currencyCode);
+            return await characterWS.LoadCharacterInfo(characterName);
         }
     }
 }

@@ -21,6 +21,7 @@ namespace TrabbleChatBot
              .AddSingleton<IChatBotCustomerCareService, ChatBotCustomerCareService>()
              .AddSingleton<IExchangeRatesService, ExchangeRatesService>()
              .AddSingleton<IChatBotHelperService, ChatBotHelperService>()
+             .AddSingleton<ICharacterDataService, CharacterDataService>()
              .AddSingleton<IChatBotManagerService, ChatBotManagerService>()
              .BuildServiceProvider();
 
