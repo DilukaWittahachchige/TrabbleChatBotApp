@@ -11,6 +11,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\TrabbleChatBotBusinessServices\TrabbleChatBotBusinessServices.csproj" />
+    <ProjectReference Include="..\TrabbleChatBotDataAccess\TrabbleChatBotDataAccess.csproj" />
     <ProjectReference Include="..\TrabbleChatBotIBusinessServices\ITrabbleChatBotBusinessServices.csproj" />
   </ItemGroup>
 

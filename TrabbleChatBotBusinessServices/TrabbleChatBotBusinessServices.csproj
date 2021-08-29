@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>Library</OutputType>
@@ -10,6 +10,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\ITrabbleChatBotDataAccess\ITrabbleChatBotDataAccess.csproj" />
+    <ProjectReference Include="..\TrabbleChatBotCommon\TrabbleChatBotCommon.csproj" />
     <ProjectReference Include="..\TrabbleChatBotIBusinessServices\ITrabbleChatBotBusinessServices.csproj" />
   </ItemGroup>
 
