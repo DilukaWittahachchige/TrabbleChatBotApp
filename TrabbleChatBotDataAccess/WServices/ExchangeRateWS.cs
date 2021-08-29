@@ -10,25 +10,14 @@ namespace TrabbleChatBotDataAccess.WServices
 {
     public class ExchangeRateWS
     {
+        private const string ExchangeRatesUrl = "https://open.er-api.com/v6/latest/";
+
         public async Task<ExchangeRates> LoadExchangeRates(string currencyCode)
         {
-            ExchangeRates exchangeRates = new ExchangeRates();
-            using (var httpClient = new HttpClient())
-            {
-                using (var response = await httpClient.GetAsync("https://open.er-api.com/v6/latest/" + currencyCode))
-                {
-                    if (response.StatusCode == System.Net.HttpStatusCode.OK)
-                    {
-                        string apiResponse = await response.Content.ReadAsStringAsync();
-                        exchangeRates = JsonSerializer.Deserialize<ExchangeRates>(apiResponse);
-                    }
-                    else
-                    {
-
-                    }
-                }
-            }
-            return exchangeRates;
+            var apiManager = new APIManager();
+            var paramdData = new List<string>();
+            paramdData.Add(currencyCode);
+            return await apiManager.LoadAPIResponse(new ExchangeRates(), paramdData, ExchangeRatesUrl);
         }
     }
 }

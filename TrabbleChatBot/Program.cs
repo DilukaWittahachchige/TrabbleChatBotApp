@@ -16,6 +16,7 @@ namespace TrabbleChatBot
             //TODO : Need to move into another class 
             var serviceProvider = new ServiceCollection()
              .AddSingleton<IExchangeRatesRepository, ExchangeRatesRepository>()
+             .AddSingleton<ICharacterDataRepository, CharacterDataRepository>()
 
              .AddSingleton<IChatBotCustomerCareService, ChatBotCustomerCareService>()
              .AddSingleton<IExchangeRatesService, ExchangeRatesService>()

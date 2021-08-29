@@ -30,6 +30,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrabbleChatBot", "TrabbleCh
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ITrabbleChatBotDataAccess", "ITrabbleChatBotDataAccess\ITrabbleChatBotDataAccess.csproj", "{38727BB3-0937-457F-BFFF-48339DD746AE}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Scheduler", "Scheduler", "{2C86B618-0B4A-4CA8-A400-064AC4890DCB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChatBotScheduler", "ChatBotScheduler\ChatBotScheduler.csproj", "{4B8ADBB5-2C63-467D-BB31-832AD509CEE0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -64,6 +68,10 @@ Global
 		{38727BB3-0937-457F-BFFF-48339DD746AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{38727BB3-0937-457F-BFFF-48339DD746AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{38727BB3-0937-457F-BFFF-48339DD746AE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4B8ADBB5-2C63-467D-BB31-832AD509CEE0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4B8ADBB5-2C63-467D-BB31-832AD509CEE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4B8ADBB5-2C63-467D-BB31-832AD509CEE0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4B8ADBB5-2C63-467D-BB31-832AD509CEE0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -75,6 +83,7 @@ Global
 		{9E76727B-1F7C-4AD6-AA7E-07CB3C64F9B6} = {A86E5C62-8048-433A-AE4C-052C6BEE651A}
 		{906E3DEB-917C-49F5-AFBD-76046D4EAEDA} = {27EE7AA3-2C2F-45EB-B6BB-807058EA12C9}
 		{38727BB3-0937-457F-BFFF-48339DD746AE} = {B2B00E46-BDFB-4651-869B-0576B5B59BF3}
+		{4B8ADBB5-2C63-467D-BB31-832AD509CEE0} = {2C86B618-0B4A-4CA8-A400-064AC4890DCB}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3CFA8F6F-F469-4BD8-8264-7E22A013CEB6}
