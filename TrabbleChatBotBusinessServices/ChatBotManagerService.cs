@@ -82,7 +82,7 @@ namespace TrabbleChatBotBusinessServices
 
         private string LoadCharacterDataString(string charaterName)
         {
-            var characterInfoObj = _characterDataService.LoadCharacterDataAsync("Shah_Rukh_Khan").Result;
+            var characterInfoObj = _characterDataService.LoadCharacterDataAsync(charaterName).Result;
             var characterInfoString = string.Empty;
 
             //Reflection
